@@ -1,6 +1,7 @@
 html,
 body {
     height: 100%;
+    width: 100%;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -14,6 +15,8 @@ ul li {
 }
 
 #container {
+    height: 100%;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 4fr;
 }
@@ -22,6 +25,51 @@ ul li {
     grid-column: 2;
     grid-row: 1;
     height: 150px;
+    padding: 20px 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.header-section {
+    display: flex;
+}
+
+.header-section.top,
+.header-section.bottom {
+    gap: 30px;
+    align-items: center;
+}
+
+.header-section.bottom {
+    justify-content: center;
+}
+
+.header svg {
+    height: 25px;
+    width: 25px;
+}
+
+.header button {
+    background-color: #0096FF;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 10px 40px;
+}
+
+button:hover {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.header .search-bar {
+    height: 25px;
+    width: 400px;
+    background-color: lightgray;
+    border: none;
+    border-radius: 25px;
+    margin-right: auto;
 }
 
 .sidebar {
@@ -40,6 +88,31 @@ ul li {
 
 .sidebar .item-1 {
     margin-top: 30px;
+    color: white;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.item-1 svg {
+    fill: white;
+    height: 40px;
+    width: 40px;
+}
+
+.item-2 ul li,
+.item-3 ul li{
+    color: white;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.item-2 svg, 
+.item-3 svg {
+    height: 25px;
+    width: 25px;
+    fill: white;
 }
 
 .announcements {
@@ -67,7 +140,7 @@ ul li {
 
 .announcements-section.one li:nth-child(1n + 2) {
     border-top: 1px solid gray;
-
+    padding-top: 10px;
 }
 
 .article {
@@ -76,6 +149,22 @@ ul li {
 
     display: grid;
     grid-template-columns: 3fr 1fr;
+}
+
+.article .icon {
+    height: 25px;
+    width: 25px;
+}
+
+.article li {   
+    display: flex;
+    gap: 20px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .projects {
@@ -92,6 +181,10 @@ ul li {
     background-color: white;
 }
 
+.card {
+    border-left: 10px solid orange;
+}
+
 .card .heading {
     font-weight: 600;
 }
@@ -103,5 +196,5 @@ ul li {
 .cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 40px;
 }
